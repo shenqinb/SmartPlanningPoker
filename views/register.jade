@@ -1,0 +1,14 @@
+extends layout
+block header
+	h1 Planner
+
+block content
+	.container
+		.center
+			img.imgLogo(src='/images/logo.png')
+		form(id='registerForm', method='post', action='/spp/register')
+			input(type='text',name='name',id='name',value='',placeholder='Your Intranet ID')
+			input(type='password',name='password',id='password',value='',placeholder='Your Password')
+			a(href='javascript:submit("registerForm");',data-role='button',data-theme='a') Register
+block footer
+	h4 From &copy; SmileVirus Team

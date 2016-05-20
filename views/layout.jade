@@ -1,0 +1,19 @@
+doctype html
+html
+	head
+		title= title
+		meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		link(rel='stylesheet', href='/stylesheets/jquery.mobile-1.4.2.min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(type='text/javascript', src='/javascripts/jquery-1.9.1.min.js')
+		script(type='text/javascript', src='/javascripts/jquery.mobile-1.4.2.min.js')
+		script(type='text/javascript', src='/javascripts/base.js')
+		block files
+	body
+		div(data-role='page')
+			div.header(data-role='header',data-position='inline')
+				block header
+			div.main(data-role='main')
+				block content
+			div.footer(data-role='footer')
+				block footer
